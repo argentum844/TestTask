@@ -20,8 +20,6 @@ namespace WebApplicationDaData.Controllers
             var api = new CleanClientAsync(configuration.APIKey, configuration.APISecret);
             var result = await api.Clean<Address>(address);
             UserAddress res = mapper.Map<UserAddress>(result);
-            int a = 1, b = 0;
-            a = a / b;
             return res;
         }
     }
